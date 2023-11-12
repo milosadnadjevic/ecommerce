@@ -1,13 +1,13 @@
 {% extends "ecommerce/base.html"%}
 {% load static %}
-{% block title %} Home {% endblock %}
+{% block title %} {{ category.name|title}} {% endblock %}
 
 {% block content %}
 
 <main><div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="pb-3 h5">All Books</div>
+      <div class="pb-3 h5">{{ category.name|title}}</div>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
 
         {% for product in products %}
